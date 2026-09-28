@@ -16,6 +16,14 @@ from dashboard_models import (
     model_results,
 )
 
+app = Dash(__name__)
+
+app.layout = html.Div([
+    html.H1("DIRISA Project Dashboard")
+])
+
+server = app.server
+
 # --- 1. DATA PREPARATION FOR STAKEHOLDERS ---
 dashboard_df = model_data.copy()
 
